@@ -1,136 +1,137 @@
 const BLINKIT_ITEMS = [
   {
     id: 'amul_milk',
-    name: 'Amul Taaza Homogenised Toned Milk',
+    name: 'Amul Taaza Toned Milk',
     unit: '500 ml pouch',
     price: 28,
     emoji: '🥛',
     category: 'groceries',
-    hasSwap: false,
-    neutralNote: 'Recyclable food-grade LDPE pouch uses 70% less transport fuel than glass.'
+    ecoGroup: 'dairy_pouch',
+    hasSwap: false
+  },
+  {
+    id: 'disposable_plates',
+    name: 'Plastic Party Plates (20 pcs)',
+    unit: '20 pcs · Single-use',
+    price: 75,
+    emoji: '🍽️',
+    category: 'household',
+    ecoGroup: 'tableware',
+    hasSwap: true,
+    swap: {
+      title: 'Areca Palm Leaf Plates (20 pcs)',
+      shortLabel: 'Swap: Areca Leaf ₹110',
+      unit: '20 pcs · 100% Compostable',
+      price: 110,
+      diffText: '₹35 more',
+      gpReward: 50,
+      longTermSaving: 680,
+      plasticSaved: 20,
+      reason: 'Sturdy natural leaf plates that compost in 45 days.'
+    }
   },
   {
     id: 'lays_chips',
-    name: "Lay's India's Magic Masala Potato Chips",
+    name: "Lay's Magic Masala Chips",
     unit: '50 g pouch',
     price: 20,
     emoji: '🥔',
     category: 'snacks',
-    hasSwap: false,
-    neutralNote: 'Local Delhi dark store inventory dispatched within 8 minutes.'
-  },
-  {
-    id: 'disposable_plates',
-    name: 'Plastic Party Plates (Pack of 20)',
-    unit: 'Single-use throwaway plastic',
-    price: 75,
-    emoji: '🍽️',
-    category: 'household',
-    hasSwap: true,
-    swap: {
-      title: 'Reusable Areca Palm Leaf Plates (Set of 20)',
-      unit: '100% compostable fallen-leaf tableware',
-      price: 110,
-      diffText: 'just ₹35 more',
-      gpReward: 50,
-      longTermSaving: 680,
-      plasticSaved: 20,
-      reason: '100% chemical-free fallen leaves, microwave safe, and decomposes in your home garden in 45 days.'
-    }
+    ecoGroup: 'snacks_ready',
+    hasSwap: false
   },
   {
     id: 'paper_towels',
-    name: 'Classic Kitchen Towel Paper Roll (2 Rolls)',
-    unit: '120 disposable sheets',
+    name: 'Kitchen Paper Towel (2 Rolls)',
+    unit: '120 pulls',
     price: 99,
     emoji: '🧻',
     category: 'household',
+    ecoGroup: 'home_refill',
     hasSwap: true,
     swap: {
-      title: 'Washable Bamboo Terry Kitchen Towels (Pack of 4)',
-      unit: 'Washable 100+ times · Replaces 24 rolls',
+      title: 'Washable Bamboo Cloths (4 pcs)',
+      shortLabel: 'Swap: Bamboo Cloths ₹149',
+      unit: '4 cloths · 100+ washes',
       price: 149,
-      diffText: 'just ₹50 more',
+      diffText: '₹50 more',
       gpReward: 55,
       longTermSaving: 1100,
       plasticSaved: 6,
-      reason: 'Lasts 100+ washes in Delhi water. Eliminates constant paper roll repeat buys.'
+      reason: 'Replaces 24 paper rolls; machine washable.'
     }
   },
   {
     id: 'dishwash_bottle',
-    name: 'Vim Dishwash Liquid Lemon Bottle',
-    unit: '500 ml rigid plastic bottle',
+    name: 'Vim Dishwash Gel Bottle',
+    unit: '500 ml bottle',
     price: 115,
     emoji: '🧴',
     category: 'household',
+    ecoGroup: 'home_refill',
     hasSwap: true,
     swap: {
-      title: 'Vim Dishwash Concentrated Refill Pouch',
-      unit: '1 Litre pouch (2× volume · 80% less plastic)',
+      title: 'Vim Concentrated Refill Pouch',
+      shortLabel: 'Swap: 1L Refill ₹105',
+      unit: '1 Litre (2× qty)',
       price: 105,
-      diffText: '₹10 LESS right now',
+      diffText: '₹10 LESS',
       gpReward: 40,
       longTermSaving: 140,
       plasticSaved: 2,
-      reason: 'Double the liquid for ₹10 less. Reuse your existing bottle at home.'
+      reason: 'Double quantity for ₹10 less using your home bottle.'
     }
   },
   {
-    id: 'plastic_straws',
-    name: 'Striped Flexible Plastic Straws (Pack of 50)',
-    unit: 'Single-use colored polypropylene',
-    price: 60,
-    emoji: '🥤',
-    category: 'household',
-    hasSwap: true,
-    swap: {
-      title: 'Stainless Steel Straws Set (4 Straws + Cleaner)',
-      unit: 'Lifetime food-grade steel · Travel pouch',
-      price: 110,
-      diffText: 'just ₹50 more',
-      gpReward: 45,
-      longTermSaving: 540,
-      plasticSaved: 50,
-      reason: 'Zero microplastics. Clean once and use forever.'
-    }
+    id: 'bread_white',
+    name: 'Harvest Gold Sandwich Bread',
+    unit: '400 g pack',
+    price: 45,
+    emoji: '🍞',
+    category: 'groceries',
+    ecoGroup: 'dairy_pouch',
+    hasSwap: false
   },
   {
     id: 'plastic_toothbrush',
-    name: 'Colgate ZigZag Manual Toothbrush',
-    unit: 'Virgin plastic handle',
+    name: 'Colgate ZigZag Toothbrush',
+    unit: '1 pc · Plastic handle',
     price: 45,
     emoji: '🪥',
     category: 'personal',
+    ecoGroup: 'personal_care',
     hasSwap: true,
     swap: {
-      title: 'Organic Bamboo Charcoal Toothbrush (Pack of 2)',
-      unit: 'Biodegradable bamboo · BPA-free bristles',
+      title: 'Bamboo Charcoal Brush (2 pcs)',
+      shortLabel: 'Swap: Bamboo 2-Pack ₹80',
+      unit: '2 pcs · Biodegradable',
       price: 80,
-      diffText: 'just ₹35 more',
+      diffText: '₹35 more',
       gpReward: 35,
       longTermSaving: 120,
       plasticSaved: 2,
-      reason: 'Pesticide-free bamboo handle degrades naturally in soil instead of lingering for 400 years.'
+      reason: '2 brushes with compostable bamboo handles.'
     }
   },
   {
     id: 'aa_batteries',
-    name: 'Everyday AA Alkaline Batteries (4 Pcs)',
-    unit: 'Single-use disposable cells',
+    name: 'Eveready AA Batteries (4 pcs)',
+    unit: '4 pcs · Use & throw',
     price: 120,
     emoji: '🔋',
     category: 'household',
+    ecoGroup: 'home_refill',
     hasSwap: true,
     swap: {
-      title: 'USB-C Rechargeable Lithium AA Cells (2 Pcs)',
-      unit: '500 recharge cycles via phone cord',
+      title: 'USB-C Rechargeable AA (2 pcs)',
+      shortLabel: 'Swap: USB-C AA ₹180',
+      unit: '2 pcs · 500 charges',
       price: 180,
-      diffText: 'just ₹60 more',
+      diffText: '₹60 more',
       gpReward: 65,
       longTermSaving: 1400,
       plasticSaved: 4,
-      reason: 'Plugs straight into any mobile charger. Eliminates recurring battery disposal.'
+      reason: 'Charges with any phone cable 500 times.'
     }
   },
   {
@@ -140,65 +141,80 @@ const BLINKIT_ITEMS = [
     price: 40,
     emoji: '🥫',
     category: 'snacks',
-    hasSwap: false,
-    neutralNote: 'Infinitely recyclable aluminum with highest recycling efficiency in Delhi.'
+    ecoGroup: 'snacks_ready',
+    hasSwap: false
   },
   {
-    id: 'bread_white',
-    name: 'Harvest Gold White Sandwich Bread',
-    unit: '400 g pack',
-    price: 45,
-    emoji: '🍞',
-    category: 'groceries',
-    hasSwap: false,
-    neutralNote: 'Fresh daily batch from local bakery partner.'
+    id: 'plastic_straws',
+    name: 'Flexible Plastic Straws (50 pcs)',
+    unit: '50 pcs pack',
+    price: 60,
+    emoji: '🥤',
+    category: 'household',
+    ecoGroup: 'tableware',
+    hasSwap: true,
+    swap: {
+      title: 'Steel Straws + Brush (4 pcs)',
+      shortLabel: 'Swap: Steel Straws ₹110',
+      unit: '4 steel straws + brush',
+      price: 110,
+      diffText: '₹50 more',
+      gpReward: 45,
+      longTermSaving: 540,
+      plasticSaved: 50,
+      reason: 'Washable food-grade steel straws that last forever.'
+    }
   },
   {
     id: 'handwash_pump',
-    name: 'Dettol Liquid Handwash Pump Bottle',
-    unit: '200 ml dispenser bottle',
+    name: 'Dettol Handwash Pump',
+    unit: '200 ml pump bottle',
     price: 99,
     emoji: '🧼',
     category: 'personal',
+    ecoGroup: 'home_refill',
     hasSwap: true,
     swap: {
-      title: 'Dettol Handwash Value Refill Pouch',
-      unit: '750 ml refill pouch (3.7× quantity)',
+      title: 'Dettol 750ml Value Refill',
+      shortLabel: 'Swap: 750ml Refill ₹120',
+      unit: '750 ml (3.7× qty)',
       price: 120,
-      diffText: 'just ₹21 more for 3.7× volume',
+      diffText: '₹21 more',
       gpReward: 45,
       longTermSaving: 240,
       plasticSaved: 3,
-      reason: 'Pay only ₹21 more and get almost 4 bottles worth of handwash.'
+      reason: 'Almost 4 bottles of liquid for just ₹21 extra.'
     }
   },
   {
     id: 'maggi_noodles',
-    name: 'Maggi 2-Minute Instant Noodles (Pack of 4)',
-    unit: '280 g pouch',
+    name: 'Maggi Masala Noodles (4 Pack)',
+    unit: '280 g pack',
     price: 56,
     emoji: '🍜',
     category: 'groceries',
-    hasSwap: false,
-    neutralNote: 'Quick meal staple; choose Minimal Packaging at checkout to skip extra bags.'
+    ecoGroup: 'snacks_ready',
+    hasSwap: false
   },
   {
     id: 'garbage_bags',
-    name: 'Black Virgin Plastic Garbage Bags (30 Pcs)',
-    unit: 'Non-biodegradable roll',
+    name: 'Plastic Garbage Bags (30 pcs)',
+    unit: '30 bags · Medium',
     price: 90,
     emoji: '🗑️',
     category: 'household',
+    ecoGroup: 'home_refill',
     hasSwap: true,
     swap: {
-      title: '100% Cornstarch Compostable Garbage Bags (30 Pcs)',
-      unit: 'CPCB Certified bio-based bags',
+      title: 'Cornstarch Bio-Bags (30 pcs)',
+      shortLabel: 'Swap: Bio-Bags ₹130',
+      unit: '30 bags · Compostable',
       price: 130,
-      diffText: 'just ₹40 more',
+      diffText: '₹40 more',
       gpReward: 50,
-      longTermSaving: 0,
+      longTermSaving: 100,
       plasticSaved: 30,
-      reason: 'Breaks down into water and CO₂ within 180 days in municipal compost.'
+      reason: 'Breaks down naturally in soil within 6 months.'
     }
   }
 ];
@@ -206,30 +222,24 @@ const BLINKIT_ITEMS = [
 const REWARDS_CATALOG = [
   {
     id: 'cashback_20',
-    title: '₹20 Instant Bill Cashback',
-    sub: 'Deducted directly from your next Blinkit checkout total',
+    title: '₹20 Instant Bill Discount',
+    sub: 'Applies directly to your current cart bill',
     cost: 200,
     type: 'discount',
     value: 20
   },
   {
     id: 'mesh_bags',
-    title: 'Free Cotton Mesh Veggie Bags (Set of 3)',
-    sub: 'Added into your bag on your next order for ₹0',
-    cost: 260,
+    title: 'Free Reusable Cotton Veggie Bag',
+    sub: 'Added to your current Blinkit order for ₹0',
+    cost: 250,
     type: 'free_item',
-    itemName: '🎁 Free Cotton Mesh Veggie Bags (×3)'
-  },
-  {
-    id: 'tree_pledge',
-    title: 'Plant 1 Native Tree on Delhi Ridge',
-    sub: 'Verified plantation certificate via EcoAlt Greens',
-    cost: 350,
-    type: 'pledge'
+    itemName: '🎁 Free Cotton Veggie Bag'
   }
 ];
 
 const INITIAL_APP_STATE = {
+  ecoAltEnabled: true,
   activeView: 'viewHome',
   searchQuery: '',
   selectedCategory: 'all',
@@ -237,20 +247,20 @@ const INITIAL_APP_STATE = {
     amul_milk: { qty: 1, swapped: false },
     disposable_plates: { qty: 1, swapped: false }
   },
-  cutleryIncluded: false,
+  choiceOptions: {
+    skipMoistureLiner: true,
+    returnEmptyMilkPouches: false,
+    skipSnackTissuesCutlery: true,
+    returnEmptyBottlesCells: false
+  },
   packagingType: 'minimal',
-  groupDelivery: true,
-  returnBags: false,
   greenPoints: 280,
   appliedRewardDiscount: 0,
   freeRewardItem: null,
-  lifetimePlastic: 18,
-  lifetimeMoney: 840,
-  lifetimeOrders: 3,
   history: [
-    { text: 'Swapped to Vim Concentrated Refill', pts: '+40 GP' },
-    { text: 'Skipped cutlery on grocery order', pts: '+15 GP' },
-    { text: 'Minimal packaging credit', pts: '+25 GP' }
+    { text: 'Swapped to Vim 1L Refill Pouch', pts: '+40 GP' },
+    { text: 'Skipped outer bag & plastic liner', pts: '+35 GP' },
+    { text: 'Returned clean milk pouches', pts: '+20 GP' }
   ]
 };
 
@@ -258,9 +268,12 @@ let appState = readPersistedState();
 
 function readPersistedState() {
   try {
-    const data = localStorage.getItem('ecoalt_blinkit_state_v2');
+    const data = localStorage.getItem('ecoalt_blinkit_state_v3');
     if (data) {
-      return Object.assign({}, INITIAL_APP_STATE, JSON.parse(data));
+      const parsed = JSON.parse(data);
+      return Object.assign({}, INITIAL_APP_STATE, parsed, {
+        choiceOptions: Object.assign({}, INITIAL_APP_STATE.choiceOptions, parsed.choiceOptions || {})
+      });
     }
   } catch (err) {
     return JSON.parse(JSON.stringify(INITIAL_APP_STATE));
@@ -270,7 +283,7 @@ function readPersistedState() {
 
 function persistState() {
   try {
-    localStorage.setItem('ecoalt_blinkit_state_v2', JSON.stringify(appState));
+    localStorage.setItem('ecoalt_blinkit_state_v3', JSON.stringify(appState));
   } catch (err) {}
 }
 
@@ -284,7 +297,7 @@ function triggerFigmaSplash() {
   splash.classList.remove('fade-out');
   setTimeout(() => {
     splash.classList.add('fade-out');
-  }, 1100);
+  }, 1050);
 }
 
 function displayToast(msg) {
@@ -295,7 +308,72 @@ function displayToast(msg) {
   clearTimeout(window.__toastTimer);
   window.__toastTimer = setTimeout(() => {
     t.classList.add('hidden');
-  }, 2200);
+  }, 2100);
+}
+
+function getRelevantCartChoices() {
+  const cartIds = Object.keys(appState.cart).filter((id) => appState.cart[id] && appState.cart[id].qty > 0);
+  const groups = new Set();
+  const namesByGroup = {
+    dairy_pouch: [],
+    snacks_ready: [],
+    tableware: [],
+    home_refill: [],
+    personal_care: []
+  };
+
+  cartIds.forEach((id) => {
+    const it = getItem(id);
+    if (!it) return;
+    groups.add(it.ecoGroup);
+    if (namesByGroup[it.ecoGroup]) {
+      namesByGroup[it.ecoGroup].push(it.name.split(' ')[0]);
+    }
+  });
+
+  const choices = [];
+
+  if (groups.has('dairy_pouch')) {
+    const sample = namesByGroup.dairy_pouch.slice(0, 2).join(' & ');
+    choices.push({
+      key: 'skipMoistureLiner',
+      title: `Skip extra plastic pouch liner for ${sample}`,
+      sub: 'Sealed pack needs no inner poly-bag · Skips 1 plastic liner (+15 GP)',
+      gp: 15,
+      plastic: 1
+    });
+    choices.push({
+      key: 'returnEmptyMilkPouches',
+      title: 'Hand back rinsed empty milk/bread pouches to rider',
+      sub: 'Sent directly for LDPE pellet recycling (+20 GP)',
+      gp: 20,
+      plastic: 2
+    });
+  }
+
+  if (groups.has('snacks_ready') || groups.has('tableware')) {
+    const sample = [...namesByGroup.snacks_ready, ...namesByGroup.tableware].slice(0, 2).join(' & ');
+    choices.push({
+      key: 'skipSnackTissuesCutlery',
+      title: `Skip disposable cutlery & paper napkins for ${sample}`,
+      sub: 'Eating at home · Skips 2 single-use items (+15 GP)',
+      gp: 15,
+      plastic: 2
+    });
+  }
+
+  if (groups.has('home_refill') || groups.has('personal_care')) {
+    const sample = [...namesByGroup.home_refill, ...namesByGroup.personal_care].slice(0, 2).join(' & ');
+    choices.push({
+      key: 'returnEmptyBottlesCells',
+      title: `Return old empty container/cells for ${sample}`,
+      sub: 'Rider collects empty bottle or used batteries (+25 GP)',
+      gp: 25,
+      plastic: 1
+    });
+  }
+
+  return choices;
 }
 
 function computeCheckoutMetrics() {
@@ -322,19 +400,22 @@ function computeCheckoutMetrics() {
     }
   });
 
-  const cutleryPlastic = appState.cutleryIncluded ? 0 : 2;
-  const cutleryGp = appState.cutleryIncluded ? 0 : 15;
+  if (appState.ecoAltEnabled && itemsCount > 0) {
+    const relevantChoices = getRelevantCartChoices();
+    relevantChoices.forEach((ch) => {
+      if (appState.choiceOptions[ch.key]) {
+        totalOrderGp += ch.gp;
+        plasticItemsSkipped += ch.plastic;
+      }
+    });
 
-  const pkgPlastic = appState.packagingType === 'minimal' ? 2 : 0;
-  const pkgGp = appState.packagingType === 'minimal' ? 25 : 0;
-  const pkgDiscount = appState.packagingType === 'minimal' ? 5 : 0;
+    if (appState.packagingType === 'minimal') {
+      totalOrderGp += 20;
+      plasticItemsSkipped += 1;
+    }
+  }
 
-  const groupGp = appState.groupDelivery ? 20 : 0;
-  const bagReturnGp = appState.returnBags ? 15 : 0;
-
-  plasticItemsSkipped += cutleryPlastic + pkgPlastic;
-  totalOrderGp += cutleryGp + pkgGp + groupGp + bagReturnGp;
-
+  const pkgDiscount = appState.ecoAltEnabled && appState.packagingType === 'minimal' && itemsCount > 0 ? 5 : 0;
   const finalPayable = Math.max(0, subtotal - pkgDiscount - appState.appliedRewardDiscount);
 
   return {
@@ -348,7 +429,27 @@ function computeCheckoutMetrics() {
   };
 }
 
+function renderEcoAltModeBar() {
+  const bar = document.getElementById('ecoAltModeBar');
+  const toggle = document.getElementById('ecoAltModeToggle');
+  const title = document.getElementById('ecoModeTitle');
+  const sub = document.getElementById('ecoModeSub');
+
+  toggle.checked = appState.ecoAltEnabled;
+  if (appState.ecoAltEnabled) {
+    bar.classList.remove('mode-off');
+    title.textContent = 'EcoAlt ON';
+    sub.textContent = 'Showing 1-tap durable swaps & Green Points';
+  } else {
+    bar.classList.add('mode-off');
+    title.textContent = 'EcoAlt OFF';
+    sub.textContent = 'Standard Blinkit view (turn ON for smart swaps)';
+  }
+}
+
 function renderCatalog() {
+  renderEcoAltModeBar();
+
   const grid = document.getElementById('productsGrid');
   const query = appState.searchQuery.trim().toLowerCase();
 
@@ -371,18 +472,19 @@ function renderCatalog() {
     const currentPrice = isSwapped ? it.swap.price : it.price;
 
     html += `
-      <div class="product-row-card">
-        <div class="product-main-flex">
-          <div class="product-emoji-tile">${it.emoji}</div>
-          <div class="product-info-block">
-            <div class="product-name-text">${currentName}</div>
-            <div class="product-unit-text">${currentUnit}</div>
-            <div class="product-price-line">
-              <span class="price-bold">₹${currentPrice}</span>
-              ${isSwapped ? '<span class="swapped-tag">✓ Swapped Alternative</span>' : ''}
-            </div>
-          </div>
-          <div class="action-stepper-wrap">
+      <div class="blinkit-tile ${isSwapped ? 'swapped-tile' : ''}">
+        <div class="tile-image-box">
+          <span>${it.emoji}</span>
+          <span class="tile-eta-badge">⏱ 8 MINS</span>
+          ${appState.ecoAltEnabled && it.hasSwap ? `<span class="tile-gp-corner">+${it.swap.gpReward} GP</span>` : ''}
+        </div>
+
+        <div class="tile-body">
+          <div class="tile-title">${currentName}</div>
+          <div class="tile-unit">${currentUnit}</div>
+
+          <div class="tile-price-row">
+            <span class="tile-price">₹${currentPrice}</span>
             ${
               inCartQty > 0
                 ? `
@@ -400,42 +502,44 @@ function renderCatalog() {
         </div>
 
         ${
-          it.hasSwap && !isSwapped
+          appState.ecoAltEnabled && it.hasSwap && !isSwapped
             ? `
-          <div class="inline-swap-nudge">
-            <div class="nudge-top-meta">
-              <span class="nudge-tag">ECOALT SMART SWAP</span>
-              <span class="nudge-points-bonus">+${it.swap.gpReward} GP</span>
-            </div>
-            <div class="nudge-body-copy">
-              Switch to <strong>${it.swap.title}</strong> for ${it.swap.diffText}. ${it.swap.reason}
-            </div>
-            <button type="button" class="one-tap-swap-button" data-swap-id="${it.id}">
-              <span>1-Tap Swap to Sustainable (₹${it.swap.price})</span>
-              <span>Swap →</span>
+          <div class="tile-swap-strip">
+            <div class="tile-swap-caption">${it.swap.reason}</div>
+            <button type="button" class="tile-swap-btn" data-swap-id="${it.id}">
+              <span>⚡ ${it.swap.shortLabel}</span>
+              <span>→</span>
             </button>
           </div>
         `
             : ''
         }
 
-        ${!it.hasSwap && it.neutralNote ? `<div class="neutral-note">${it.neutralNote}</div>` : ''}
+        ${
+          isSwapped
+            ? `<div class="tile-swapped-badge">✓ EcoAlt Swapped (+${it.swap.gpReward} GP)</div>`
+            : ''
+        }
       </div>
     `;
   });
 
-  grid.innerHTML = html || '<div style="padding:20px;text-align:center;color:#64748b;font-size:12px;">No items match your search.</div>';
+  grid.innerHTML = html || '<div style="grid-column:span 2;padding:20px;text-align:center;color:#64748b;font-size:12px;">No matching items found.</div>';
 }
 
 function renderCheckoutView() {
   const metrics = computeCheckoutMetrics();
   const listEl = document.getElementById('cartItemsList');
   const nudgeZone = document.getElementById('checkoutNudgeZone');
+  const ecoCard = document.getElementById('checkoutEcoCard');
+  const dynamicChoicesEl = document.getElementById('dynamicCartChoicesList');
 
   const cartIds = Object.keys(appState.cart).filter((id) => appState.cart[id] && appState.cart[id].qty > 0);
 
   if (cartIds.length === 0) {
-    listEl.innerHTML = '<div style="padding:16px;text-align:center;color:#64748b;font-size:12px;">Your cart is empty. Add items from the Store view!</div>';
+    listEl.innerHTML = '<div style="padding:16px;text-align:center;color:#64748b;font-size:12px;">Your cart is empty. Add items from the Store!</div>';
+    nudgeZone.innerHTML = '';
+    ecoCard.classList.add('hidden');
   } else {
     let html = '';
     cartIds.forEach((id) => {
@@ -455,7 +559,7 @@ function renderCheckoutView() {
             <div class="cart-item-title">${it.emoji} ${title} × ${entry.qty}</div>
             <div class="cart-item-sub">${unit}</div>
           </div>
-          <div class="stepper" style="margin-right:8px;">
+          <div class="stepper" style="margin-right:6px;">
             <button type="button" class="stepper-btn" data-step="dec" data-id="${id}">−</button>
             <span class="stepper-val">${entry.qty}</span>
             <button type="button" class="stepper-btn" data-step="inc" data-id="${id}">+</button>
@@ -477,38 +581,54 @@ function renderCheckoutView() {
       `;
     }
     listEl.innerHTML = html;
-  }
 
-  let nudgeHtml = '';
-  cartIds.forEach((id) => {
-    const it = getItem(id);
-    const entry = appState.cart[id];
-    if (it && it.hasSwap && !entry.swapped) {
-      nudgeHtml += `
-        <div class="inline-swap-nudge">
-          <div class="nudge-top-meta">
-            <span class="nudge-tag">PRE-CHECKOUT ECOALT NUDGE</span>
-            <span class="nudge-points-bonus">+${it.swap.gpReward} GP</span>
-          </div>
-          <div class="nudge-body-copy">
-            Buying short-lived <strong>${it.name}</strong>? Switch to <strong>${it.swap.title}</strong> (${it.swap.diffText}) and skip ${it.swap.plasticSaved} plastics.
-          </div>
-          <button type="button" class="one-tap-swap-button" data-swap-id="${id}">
-            <span>1-Tap Swap (₹${it.swap.price})</span>
-            <span>Switch →</span>
-          </button>
-        </div>
-      `;
+    if (appState.ecoAltEnabled) {
+      ecoCard.classList.remove('hidden');
+
+      let nudgeHtml = '';
+      cartIds.forEach((id) => {
+        const it = getItem(id);
+        const entry = appState.cart[id];
+        if (it && it.hasSwap && !entry.swapped) {
+          nudgeHtml += `
+            <div class="inline-swap-nudge">
+              <div class="nudge-top-meta">
+                <span class="nudge-tag">BETTER CHOICE SWAP</span>
+                <span class="nudge-points-bonus">+${it.swap.gpReward} GP</span>
+              </div>
+              <div class="nudge-body-copy">
+                Switch <strong>${it.name}</strong> to <strong>${it.swap.title}</strong> (${it.swap.diffText}). ${it.swap.reason}
+              </div>
+              <button type="button" class="one-tap-swap-button" data-swap-id="${id}">
+                <span>1-Tap Swap (₹${it.swap.price})</span>
+                <span>Switch →</span>
+              </button>
+            </div>
+          `;
+        }
+      });
+      nudgeZone.innerHTML = nudgeHtml;
+
+      const relevantChoices = getRelevantCartChoices();
+      dynamicChoicesEl.innerHTML = relevantChoices
+        .map(
+          (ch) => `
+          <label class="checkbox-row">
+            <input type="checkbox" data-choice-key="${ch.key}" ${appState.choiceOptions[ch.key] ? 'checked' : ''}>
+            <span class="custom-check">✓</span>
+            <span class="checkbox-text">
+              <strong>${ch.title}</strong>
+              <small>${ch.sub}</small>
+            </span>
+          </label>
+        `
+        )
+        .join('');
+    } else {
+      nudgeZone.innerHTML = '';
+      ecoCard.classList.add('hidden');
     }
-  });
-  nudgeZone.innerHTML = nudgeHtml;
-
-  const cutleryToggle = document.getElementById('cutleryToggle');
-  const cutlerySub = document.getElementById('cutlerySub');
-  cutleryToggle.checked = appState.cutleryIncluded;
-  cutlerySub.textContent = appState.cutleryIncluded
-    ? 'Cutlery included · Uncheck to skip plastic cutlery (+15 GP)'
-    : 'Skipped by default · Saves 2 plastic items (+15 GP)';
+  }
 
   const pkgMinBtn = document.getElementById('pkgMinimalBtn');
   const pkgStdBtn = document.getElementById('pkgStandardBtn');
@@ -516,18 +636,15 @@ function renderCheckoutView() {
   if (appState.packagingType === 'minimal') {
     pkgMinBtn.classList.add('active');
     pkgStdBtn.classList.remove('active');
-    pkgBadge.textContent = '₹5 off bill & +25 GP';
+    pkgBadge.textContent = '₹5 off & +20 GP';
   } else {
     pkgStdBtn.classList.add('active');
     pkgMinBtn.classList.remove('active');
     pkgBadge.textContent = 'Switch to Minimal for ₹5 off';
   }
 
-  document.getElementById('groupedDeliveryToggle').checked = appState.groupDelivery;
-  document.getElementById('returnBagsToggle').checked = appState.returnBags;
-
   document.getElementById('checkoutEcoGains').textContent = `+${metrics.totalOrderGp} GP`;
-  document.getElementById('skippedBanner').textContent = `You skipped ${metrics.plasticItemsSkipped} plastic items on this order`;
+  document.getElementById('skippedBanner').textContent = `You skipped ${metrics.plasticItemsSkipped} unnecessary plastic items for these products`;
 
   const billCard = document.getElementById('billDetailsCard');
   billCard.innerHTML = `
@@ -536,10 +653,10 @@ function renderCheckoutView() {
       <span>₹${metrics.subtotal}</span>
     </div>
     <div class="bill-line">
-      <span>Delivery Charge (8 Mins)</span>
+      <span>Delivery (8 Mins)</span>
       <span style="color:#0c831f;font-weight:700;">FREE</span>
     </div>
-    ${metrics.pkgDiscount > 0 ? `<div class="bill-line discount"><span>Minimal Packaging Rebate</span><span>−₹${metrics.pkgDiscount}</span></div>` : ''}
+    ${metrics.pkgDiscount > 0 ? `<div class="bill-line discount"><span>No Outer Bag Credit</span><span>−₹${metrics.pkgDiscount}</span></div>` : ''}
     ${appState.appliedRewardDiscount > 0 ? `<div class="bill-line discount"><span>Green Points Cashback</span><span>−₹${appState.appliedRewardDiscount}</span></div>` : ''}
     <div class="bill-line total">
       <span>To Pay</span>
@@ -548,28 +665,12 @@ function renderCheckoutView() {
   `;
 
   document.getElementById('placeOrderText').textContent = `Place Order · ₹${metrics.finalPayable}`;
-  document.getElementById('placeOrderGp').textContent = `+${metrics.totalOrderGp} GP`;
+  document.getElementById('placeOrderGp').textContent = appState.ecoAltEnabled ? `+${metrics.totalOrderGp} GP` : 'Standard';
 }
 
 function renderPointsView() {
   document.getElementById('pointsHeroVal').textContent = appState.greenPoints;
-
-  const pct = Math.min(100, Math.round((appState.greenPoints / 500) * 100));
-  document.getElementById('tierProgressFill').style.width = `${pct}%`;
-
-  const tierPill = document.getElementById('tierPill');
-  const tierLabel = document.getElementById('tierProgressLabel');
-  if (appState.greenPoints >= 500) {
-    tierPill.textContent = '🌳 ECO CHAMPION (2X POINTS)';
-    tierLabel.textContent = 'Top tier active: Double Green Points on every alternative swap!';
-  } else {
-    tierPill.textContent = '🌱 ECO EXPLORER';
-    tierLabel.textContent = `${500 - appState.greenPoints} GP away from Eco Champion (2× Points)`;
-  }
-
-  document.getElementById('statPlasticSkipped').textContent = appState.lifetimePlastic;
-  document.getElementById('statMoneySaved').textContent = `₹${appState.lifetimeMoney}`;
-  document.getElementById('statOrdersCount').textContent = appState.lifetimeOrders;
+  document.getElementById('pointsWorthBadge').textContent = `Worth ₹${Math.floor(appState.greenPoints / 10)}`;
 
   const listEl = document.getElementById('rewardsList');
   let rwHtml = '';
@@ -582,7 +683,7 @@ function renderPointsView() {
           <div class="reward-desc-text">${rw.sub}</div>
         </div>
         <button type="button" class="reward-action-btn" data-redeem="${rw.id}" ${canAfford ? '' : 'disabled'}>
-          Redeem · ${rw.cost} GP
+          Use ${rw.cost} GP
         </button>
       </div>
     `;
@@ -591,7 +692,7 @@ function renderPointsView() {
 
   const actEl = document.getElementById('activityList');
   actEl.innerHTML = appState.history
-    .slice(0, 5)
+    .slice(0, 4)
     .map(
       (h) => `
       <div class="activity-item">
@@ -657,6 +758,12 @@ function renderAll() {
 }
 
 function bindAppEvents() {
+  document.getElementById('ecoAltModeToggle').addEventListener('change', (e) => {
+    appState.ecoAltEnabled = e.target.checked;
+    displayToast(appState.ecoAltEnabled ? 'EcoAlt Mode ON: Smart swaps active' : 'EcoAlt Mode OFF: Standard store');
+    renderAll();
+  });
+
   document.querySelectorAll('.nav-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
       const view = btn.getAttribute('data-view');
@@ -695,12 +802,12 @@ function bindAppEvents() {
       } else {
         appState.cart[id].qty += 1;
       }
-      displayToast('Added to Blinkit cart');
+      displayToast('Added to cart');
       renderAll();
       return;
     }
 
-    const swapBtn = e.target.closest('.one-tap-swap-button');
+    const swapBtn = e.target.closest('.tile-swap-btn');
     if (swapBtn) {
       const id = swapBtn.getAttribute('data-swap-id');
       const it = getItem(id);
@@ -713,7 +820,7 @@ function bindAppEvents() {
           text: `Swapped to ${it.swap.title}`,
           pts: `+${it.swap.gpReward} GP`
         });
-        displayToast(`1-Tap Swap applied! +${it.swap.gpReward} Green Points`);
+        displayToast(`Swapped! +${it.swap.gpReward} Green Points`);
       }
       renderAll();
       return;
@@ -769,8 +876,11 @@ function bindAppEvents() {
     }
   });
 
-  document.getElementById('cutleryToggle').addEventListener('change', (e) => {
-    appState.cutleryIncluded = e.target.checked;
+  document.getElementById('dynamicCartChoicesList').addEventListener('change', (e) => {
+    const input = e.target.closest('input[data-choice-key]');
+    if (!input) return;
+    const key = input.getAttribute('data-choice-key');
+    appState.choiceOptions[key] = input.checked;
     renderAll();
   });
 
@@ -781,16 +891,6 @@ function bindAppEvents() {
 
   document.getElementById('pkgStandardBtn').addEventListener('click', () => {
     appState.packagingType = 'standard';
-    renderAll();
-  });
-
-  document.getElementById('groupedDeliveryToggle').addEventListener('change', (e) => {
-    appState.groupDelivery = e.target.checked;
-    renderAll();
-  });
-
-  document.getElementById('returnBagsToggle').addEventListener('change', (e) => {
-    appState.returnBags = e.target.checked;
     renderAll();
   });
 
@@ -812,33 +912,30 @@ function bindAppEvents() {
       pts: `−${reward.cost} GP`
     });
     switchView('viewCart');
-    displayToast(`Reward redeemed: ${reward.title}!`);
+    displayToast(`${reward.title} applied to Cart!`);
   });
 
   document.getElementById('placeOrderBtn').addEventListener('click', () => {
     const metrics = computeCheckoutMetrics();
     if (metrics.itemsCount === 0) {
-      displayToast('Cart is empty. Add items first.');
+      displayToast('Add items to cart first');
       return;
     }
 
     appState.greenPoints += metrics.totalOrderGp;
-    appState.lifetimePlastic += metrics.plasticItemsSkipped;
-    appState.lifetimeMoney += metrics.longTermSavings + metrics.pkgDiscount;
-    appState.lifetimeOrders += 1;
     appState.appliedRewardDiscount = 0;
     appState.freeRewardItem = null;
 
     appState.history.unshift({
-      text: `Order #${2410 + appState.lifetimeOrders}: Skipped ${metrics.plasticItemsSkipped} plastics`,
+      text: `Order placed: Skipped ${metrics.plasticItemsSkipped} plastics`,
       pts: `+${metrics.totalOrderGp} GP`
     });
 
     const summaryBox = document.getElementById('modalEcoSummary');
     summaryBox.innerHTML = `
-      <div><strong>🌍 Plastic Waste Prevented:</strong> ${metrics.plasticItemsSkipped} single-use items</div>
-      <div><strong>🌿 Green Points Earned:</strong> +${metrics.totalOrderGp} GP (Balance: ${appState.greenPoints} GP)</div>
-      <div><strong>💰 Customer Money Saved:</strong> ₹${metrics.longTermSavings + metrics.pkgDiscount} over product lifespan</div>
+      <div><strong>🌍 Plastic Items Skipped:</strong> ${metrics.plasticItemsSkipped} items</div>
+      <div><strong>🌱 Green Points Earned:</strong> +${metrics.totalOrderGp} GP (New Balance: ${appState.greenPoints} GP)</div>
+      <div><strong>💰 Customer Savings:</strong> ₹${metrics.longTermSavings + metrics.pkgDiscount} saved</div>
     `;
 
     document.getElementById('successModal').classList.remove('hidden');
@@ -852,11 +949,11 @@ function bindAppEvents() {
   });
 
   document.getElementById('refreshDemoBtn').addEventListener('click', () => {
-    localStorage.removeItem('ecoalt_blinkit_state_v2');
+    localStorage.removeItem('ecoalt_blinkit_state_v3');
     appState = JSON.parse(JSON.stringify(INITIAL_APP_STATE));
     renderAll();
     triggerFigmaSplash();
-    displayToast('EcoAlt demo reset to initial state');
+    displayToast('EcoAlt demo refreshed');
   });
 }
 
