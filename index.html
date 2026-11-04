@@ -64,19 +64,31 @@
               </div>
 
               <div class="header-category-scroller" id="categoryScroller">
-                <button type="button" class="cat-pill active" data-cat="all">All Items</button>
-                <button type="button" class="cat-pill" data-cat="groceries">Dairy &amp; Groceries</button>
-                <button type="button" class="cat-pill" data-cat="snacks">Snacks &amp; Munchies</button>
-                <button type="button" class="cat-pill" data-cat="household">Home &amp; Care</button>
+                <button type="button" class="cat-pill active" data-cat="all">All</button>
+                <button type="button" class="cat-pill" data-cat="groceries">Dairy &amp; Bread</button>
+                <button type="button" class="cat-pill" data-cat="snacks">Munchies</button>
+                <button type="button" class="cat-pill" data-cat="household">Home Essentials</button>
                 <button type="button" class="cat-pill" data-cat="personal">Personal Care</button>
               </div>
             </header>
 
             <main class="phone-scroll-area" id="phoneScrollArea">
               <div class="screen-view active" id="viewHome">
-                <div class="ecoalt-ticker">
-                  <span class="ticker-badge">EcoAlt Active</span>
-                  <span class="ticker-text" id="tickerText">Dual-Benefit: Every swap saves you money &amp; reduces waste</span>
+                <div class="ecoalt-mode-bar" id="ecoAltModeBar">
+                  <div class="mode-bar-left">
+                    <span class="mode-status-dot" id="ecoModeDot"></span>
+                    <div>
+                      <div class="mode-status-title" id="ecoModeTitle">EcoAlt ON</div>
+                      <div class="mode-status-sub" id="ecoModeSub">Showing smart money-saving eco swaps</div>
+                    </div>
+                  </div>
+                  <label class="eco-mode-switch" aria-label="Toggle EcoAlt Mode">
+                    <input type="checkbox" id="ecoAltModeToggle" checked>
+                    <span class="eco-mode-slider">
+                      <span class="slider-text-off">OFF</span>
+                      <span class="slider-text-on">ON</span>
+                    </span>
+                  </label>
                 </div>
 
                 <div class="section-title-row">
@@ -84,7 +96,7 @@
                   <span class="item-count-label" id="catalogCount">13 items</span>
                 </div>
 
-                <div class="products-grid" id="productsGrid"></div>
+                <div class="blinkit-tiles-grid" id="productsGrid"></div>
               </div>
 
               <div class="screen-view" id="viewCart">
@@ -98,55 +110,27 @@
 
                   <div class="checkout-nudge-zone" id="checkoutNudgeZone"></div>
 
-                  <div class="checkout-eco-card">
+                  <div class="checkout-eco-card" id="checkoutEcoCard">
                     <div class="eco-card-header">
                       <span class="eco-card-badge">CONSCIOUS CHOICES</span>
-                      <span class="eco-card-points" id="checkoutEcoGains">+50 GP</span>
+                      <span class="eco-card-points" id="checkoutEcoGains">+40 GP</span>
                     </div>
 
-                    <div class="eco-toggle-row">
-                      <div class="eco-toggle-info">
-                        <div class="eco-toggle-title">Plastic Cutlery &amp; Straws</div>
-                        <div class="eco-toggle-sub" id="cutlerySub">Skipped by default · Saves 2 plastic items (+15 GP)</div>
-                      </div>
-                      <label class="switch-control">
-                        <input type="checkbox" id="cutleryToggle">
-                        <span class="switch-track"></span>
-                      </label>
-                    </div>
+                    <div id="dynamicCartChoicesList" class="dynamic-choices-list"></div>
 
                     <div class="packaging-selector-group">
                       <div class="packaging-label-row">
-                        <span class="pkg-title">Packaging Type</span>
-                        <span class="pkg-perk" id="pkgPerkBadge">₹5 off bill &amp; +25 GP</span>
+                        <span class="pkg-title" id="pkgLabelTitle">Outer Carry Bag</span>
+                        <span class="pkg-perk" id="pkgPerkBadge">₹5 off &amp; +20 GP</span>
                       </div>
                       <div class="segmented-control">
-                        <button type="button" class="seg-option active" id="pkgMinimalBtn">Minimal</button>
-                        <button type="button" class="seg-option" id="pkgStandardBtn">Standard</button>
+                        <button type="button" class="seg-option active" id="pkgMinimalBtn">Minimal (No Bag)</button>
+                        <button type="button" class="seg-option" id="pkgStandardBtn">Standard Bag</button>
                       </div>
-                    </div>
-
-                    <div class="eco-sub-toggles">
-                      <label class="checkbox-row">
-                        <input type="checkbox" id="groupedDeliveryToggle" checked>
-                        <span class="custom-check">✓</span>
-                        <span class="checkbox-text">
-                          <strong>Combine delivery slot with neighbor</strong>
-                          <small>Rider makes 1 trip instead of 2 (+20 GP)</small>
-                        </span>
-                      </label>
-                      <label class="checkbox-row">
-                        <input type="checkbox" id="returnBagsToggle">
-                        <span class="custom-check">✓</span>
-                        <span class="checkbox-text">
-                          <strong>Return used Blinkit paper bags to rider</strong>
-                          <small>Cleaned and re-circulated (+15 GP)</small>
-                        </span>
-                      </label>
                     </div>
 
                     <div class="savings-summary-pill" id="skippedBanner">
-                      You skipped 4 plastic items on this order
+                      You skipped 2 plastic items on this order
                     </div>
                   </div>
 
@@ -156,38 +140,31 @@
 
               <div class="screen-view" id="viewPoints">
                 <div class="points-screen-inner">
-                  <div class="points-balance-card">
-                    <span class="points-tier-pill" id="tierPill">🌱 ECO EXPLORER</span>
-                    <div class="points-hero-number"><span id="pointsHeroVal">280</span> <small>GP</small></div>
-                    <div class="points-hero-sub">10 Green Points = ₹1 redeemable credit</div>
-                    <div class="progress-bar-shell">
-                      <div class="progress-bar-fill" id="tierProgressFill" style="width: 56%;"></div>
+                  <div class="simple-points-card">
+                    <div class="simple-points-top">
+                      <div>
+                        <span class="simple-points-label">YOUR GREEN POINTS</span>
+                        <div class="simple-points-val"><span id="pointsHeroVal">280</span> <small>GP</small></div>
+                      </div>
+                      <div class="cash-worth-pill" id="pointsWorthBadge">Worth ₹28</div>
                     </div>
-                    <div class="progress-label" id="tierProgressLabel">220 GP away from Eco Champion (2× Points)</div>
-                  </div>
-
-                  <div class="impact-metrics-row">
-                    <div class="impact-box">
-                      <span class="impact-num" id="statPlasticSkipped">18</span>
-                      <span class="impact-label">Plastics Skipped</span>
-                    </div>
-                    <div class="impact-box">
-                      <span class="impact-num" id="statMoneySaved">₹840</span>
-                      <span class="impact-label">Saved Over Time</span>
-                    </div>
-                    <div class="impact-box">
-                      <span class="impact-num" id="statOrdersCount">3</span>
-                      <span class="impact-label">Conscious Orders</span>
-                    </div>
+                    <p class="simple-points-desc">Every 10 GP = ₹1 off your Blinkit bill. Earn points whenever you swap to a durable item or skip plastic packaging.</p>
                   </div>
 
                   <div class="section-title-row">
-                    <h2>Redeem Rewards</h2>
+                    <h2>1-Tap Redeem</h2>
                   </div>
                   <div class="rewards-options-list" id="rewardsList"></div>
 
+                  <div class="how-it-works-box">
+                    <div class="how-title">How you earn points</div>
+                    <div class="how-row"><span>🔄 Swap a disposable item</span><strong>+35 to +65 GP</strong></div>
+                    <div class="how-row"><span>🛍️ Skip outer carry bag</span><strong>+20 GP &amp; ₹5 off</strong></div>
+                    <div class="how-row"><span>♻️ Product-specific eco choice</span><strong>+15 to +25 GP</strong></div>
+                  </div>
+
                   <div class="section-title-row">
-                    <h2>Recent Green Activity</h2>
+                    <h2>Recent Points Earned</h2>
                   </div>
                   <div class="activity-history-list" id="activityList"></div>
                 </div>
@@ -197,7 +174,7 @@
             <div class="floating-cart-bar hidden" id="floatingCartBar">
               <div class="cart-bar-left">
                 <span class="cart-bar-qty" id="cartBarQty">2 items</span>
-                <span class="cart-bar-price" id="cartBarPrice">₹195</span>
+                <span class="cart-bar-price" id="cartBarPrice">₹103</span>
               </div>
               <button type="button" class="cart-bar-btn" id="openCartBarBtn">
                 <span>View Cart</span>
@@ -207,8 +184,8 @@
 
             <div class="checkout-footer hidden" id="checkoutFooter">
               <button type="button" class="place-order-button" id="placeOrderBtn">
-                <span class="place-order-text" id="placeOrderText">Place Order · ₹190</span>
-                <span class="place-order-gp" id="placeOrderGp">+60 GP</span>
+                <span class="place-order-text" id="placeOrderText">Place Order · ₹98</span>
+                <span class="place-order-gp" id="placeOrderGp">+55 GP</span>
               </button>
             </div>
 
@@ -243,7 +220,7 @@
               <div class="modal-card">
                 <div class="modal-check-icon">✓</div>
                 <h3>Order Placed in 8 Mins!</h3>
-                <p>Delivering via eco-optimized dispatch to Sector 14, Rohini.</p>
+                <p>Delivering to Sector 14, Rohini.</p>
                 <div class="modal-eco-summary" id="modalEcoSummary"></div>
                 <button type="button" class="modal-cta-btn" id="modalDoneBtn">Continue Shopping</button>
               </div>
