@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Space+Grotesk&weight=800&size=52&duration=3000&pause=1000&color=FF6B00&center=true&vcenter=true&width=520&lines=E+C+O+A+L+T;Know+Before+You+Click;Dual-Benefit+Decisions" alt="EcoAlt Typing SVG" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Space+Grotesk&weight=800&size=40&duration=3000&pause=1000&color=FF6B00&center=true&vcenter=true&width=550&height=90&lines=E+C+O+A+L+T;Know+Before+You+Click;Dual-Benefit+Decisions" alt="EcoAlt Typing SVG" />
 
 # 🌱 EcoAlt — Know Before You Click
 
