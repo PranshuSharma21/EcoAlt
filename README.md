@@ -2,7 +2,7 @@
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Space+Grotesk&weight=800&size=40&duration=3000&pause=1000&color=FF6B00&center=true&vcenter=true&width=550&height=90&lines=E+C+O+A+L+T;Know+Before+You+Click;Dual-Benefit+Decisions" alt="EcoAlt Typing SVG" />
 
-# 🌱 EcoAlt — Know Before You Click
+# 🌱 EcoAlt Know Before You Click
 
 ### *A dual-benefit conscious decision engine designed for quick-commerce platforms like Blinkit.*
 
@@ -35,10 +35,10 @@
 
 ## ⚡ The Problem
 
-Quick-commerce platforms deliver essentials in under 10 minutes, but this frictionless convenience hides a major systemic trap:
+Quick commerce platforms deliver essentials in under 10 minutes, but this frictionless convenience hides a major systemic trap:
 
-- **Silent Waste Injection:** Default checkout flows automatically bundle single-use plastic cutlery, moisture-barrier poly-liners, and extra carry bags that rushed shoppers never asked for.
-- **The Planned Obsolescence Tax:** Dark stores prioritize high-margin, short-lived disposables (like single-use batteries, paper towels, and rigid plastic bottles), costing households up to **4× more** in recurring monthly re-buys.
+- **Silent Waste Injection:** Default checkout flows automatically bundle single-use plastic cutlery, moisture-barrier poly liners, and extra carry bags that rushed shoppers never asked for.
+- **The Planned Obsolescence Tax:** Dark stores prioritize high margin, short lived disposables (like single-use batteries, paper towels, and rigid plastic bottles), costing households up to **4× more** in recurring monthly re-buys.
 - **Zero Real-Time Visibility:** At the moment of the click, users only see speed and convenience. The environmental footprint and recurring financial drain remain completely invisible.
 
 ---
