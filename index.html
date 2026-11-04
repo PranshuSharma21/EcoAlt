@@ -3,373 +3,273 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blinkit Conscious Choices — The Choice Behind the Click</title>
+  <title>EcoAlt — Know before you click</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app-shell">
-    <header class="top-showcase-bar">
-      <div class="brand-cluster">
-        <span class="theme-pill">THEME 04 · CONSCIOUS CHOICES</span>
-        <h1 class="showcase-title">The Choice Behind the Click</h1>
-        <span class="showcase-subtitle">Blinkit Eco-Swap &amp; Green Points Prototype</span>
-      </div>
+  <div class="desktop-canvas">
+    <div class="canvas-left-zone">
+      <div class="brand-title">EcoAlt</div>
+    </div>
 
-      <div class="view-mode-tabs" role="tablist" aria-label="Prototype presentation mode">
-        <button type="button" class="mode-tab active" id="modeInteractiveBtn" data-mode="interactive">
-          <span class="dot-indicator green"></span>
-          Interactive Blinkit App
-        </button>
-        <button type="button" class="mode-tab" id="modeCompareBtn" data-mode="compare">
-          <span class="dot-indicator split"></span>
-          Before vs. After (Theme Reference)
-        </button>
-      </div>
-
-      <div class="preset-actions">
-        <button type="button" class="preset-btn" id="loadMealPresetBtn">Load ₹300 Meal Demo</button>
-        <button type="button" class="preset-btn" id="loadSwapPresetBtn">Load Swap Nudge Demo</button>
-        <button type="button" class="preset-btn ghost" id="resetDemoBtn">Reset</button>
-      </div>
-    </header>
-
-    <main class="workspace-stage" id="workspaceStage">
-      <section class="left-pitch-column" id="pitchColumn">
-        <div class="pitch-card hero-pitch">
-          <div class="pitch-eyebrow">WIN-WIN DECISION ENGINE</div>
-          <h2>Help people do the better thing without making it harder.</h2>
-          <p>Every nudge in this prototype passes a strict <strong>Dual-Benefit Filter</strong>: we only suggest a switch when it saves the customer money or lasts longer <em>and</em> cuts waste for the planet.</p>
-
-          <div class="live-telemetry-grid">
-            <div class="telemetry-tile">
-              <span class="telemetry-label">Green Points Balance</span>
-              <div class="telemetry-value accent-gold" id="telemetryPoints">320 GP</div>
-              <span class="telemetry-sub" id="telemetryPointsValue">Worth ₹32 instant credit</span>
-            </div>
-            <div class="telemetry-tile">
-              <span class="telemetry-label">Customer Long-Term Savings</span>
-              <div class="telemetry-value accent-mint" id="telemetrySavings">₹1,015</div>
-              <span class="telemetry-sub">From active durable swaps</span>
-            </div>
-            <div class="telemetry-tile">
-              <span class="telemetry-label">Single-Use Plastic Skipped</span>
-              <div class="telemetry-value accent-mint" id="telemetryPlastic">6 items</div>
-              <span class="telemetry-sub" id="telemetryCo2">310g CO₂e prevented today</span>
+    <div class="phone-viewport-container">
+      <div class="iphone-shell">
+        <div class="status-bar">
+          <span class="status-time" id="statusClock">8:40</span>
+          <div class="dynamic-island"></div>
+          <div class="status-right-icons">
+            <svg class="wifi-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M12 4C7.31 4 3.07 5.9 0 8.98L12 21 24 8.98C20.93 5.9 16.69 4 12 4zm0 3.5c3.67 0 7.02 1.37 9.58 3.65L12 18.82 2.42 11.15C4.98 8.87 8.33 7.5 12 7.5z"/>
+            </svg>
+            <div class="battery-pill">
+              <div class="battery-fill"></div>
             </div>
           </div>
         </div>
 
-        <div class="pitch-card feature-highlights">
-          <div class="pitch-eyebrow">3 CORE INNOVATIONS</div>
-          <div class="feature-step">
-            <span class="step-badge">1</span>
-            <div>
-              <h3>One-Tap "Better Choice" Swap</h3>
-              <p>Nudges short-lived items with durable upgrades (e.g., <em>"Switch to reusable wheat-straw set for just ₹50 more — saves ₹940 over 90 days"</em>).</p>
+        <div class="phone-display" id="phoneDisplay">
+          <div class="splash-screen" id="splashScreen">
+            <div class="splash-inner">
+              <div class="blinkit-yellow-box">
+                <span class="splash-logo-blink">blink</span><span class="splash-logo-it">it</span>
+              </div>
+              <div class="splash-subtitle">India's last minute app</div>
+              <div class="splash-ecoalt-tag">powered by EcoAlt</div>
             </div>
           </div>
-          <div class="feature-step">
-            <span class="step-badge">2</span>
-            <div>
-              <h3>Zero-Guilt Conscious Checkout</h3>
-              <p>Replaces pre-ticked plastic clutter with a smart opt-in Cutlery toggle, Minimal Packaging credit, and Combined Eco-Delivery.</p>
-            </div>
-          </div>
-          <div class="feature-step">
-            <span class="step-badge">3</span>
-            <div>
-              <h3>Green Points Loyalty Loop</h3>
-              <p>Every sustainable swap or skipped plastic item earns Green Points redeemable for instant ₹ discounts or free eco-essentials.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section class="phones-stage" id="phonesStage">
-        <div class="phone-column today-reference-column hidden" id="todayPhoneColumn">
-          <div class="phone-above-label">
-            <span class="status-dot red"></span>
-            <span>TODAY</span>
-          </div>
-          <div class="iphone-frame reference-phone">
-            <div class="iphone-notch-bar">
-              <span class="status-time">8:40</span>
-              <div class="dynamic-island"></div>
-              <div class="status-icons">
-                <span class="sig-bars">▂▄▆█</span>
-                <span class="bat-icon">▢</span>
-              </div>
-            </div>
-
-            <div class="phone-screen ref-checkout-screen">
-              <div class="ref-header">
-                <h2>Checkout</h2>
-                <span class="ref-sub">Blinkit Bistro · 8 mins delivery</span>
-              </div>
-
-              <div class="ref-order-items">
-                <div class="ref-line-item">
-                  <span>Veg biryani × 1</span>
-                  <span class="ref-price">₹180</span>
+          <div class="app-interface" id="appInterface">
+            <header class="blinkit-header">
+              <div class="header-location-bar">
+                <div class="location-cluster">
+                  <div class="eta-headline">Blinkit in 8 minutes</div>
+                  <div class="address-sub">Home - Sector 14, Rohini, Delhi ▾</div>
                 </div>
-                <div class="ref-line-item">
-                  <span>Paneer roll × 1</span>
-                  <span class="ref-price">₹120</span>
-                </div>
-              </div>
-
-              <div class="problem-box">
-                <span class="box-floating-badge red-badge">THE PROBLEM</span>
-                <div class="box-section-caption">ADDED FOR YOU</div>
-
-                <label class="ref-check-row">
-                  <input type="checkbox" checked class="today-check" data-plastic="1">
-                  <span class="custom-checkbox">✓</span>
-                  <span class="check-label-text">Plastic cutlery</span>
-                </label>
-                <label class="ref-check-row">
-                  <input type="checkbox" checked class="today-check" data-plastic="3">
-                  <span class="custom-checkbox">✓</span>
-                  <span class="check-label-text">Ketchup packets × 3</span>
-                </label>
-                <label class="ref-check-row">
-                  <input type="checkbox" checked class="today-check" data-plastic="1">
-                  <span class="custom-checkbox">✓</span>
-                  <span class="check-label-text">Extra plastic bag</span>
-                </label>
-                <label class="ref-check-row">
-                  <input type="checkbox" checked class="today-check" data-plastic="4">
-                  <span class="custom-checkbox">✓</span>
-                  <span class="check-label-text">Napkins × 4</span>
-                </label>
-
-                <div class="today-waste-warning" id="todayWasteSummary">
-                  Silent default adds <strong>9 single-use items</strong> you never asked for.
-                </div>
-              </div>
-
-              <div class="ref-Disposable-warning">
-                <div class="ref-mini-title">HIDDEN E-COMMERCE TRAP</div>
-                <p>Short-lived disposables are pushed first because repeat purchases drive margin—costing you 4× more every month.</p>
-              </div>
-
-              <div class="ref-bottom-cta">
-                <button type="button" class="ref-place-btn" id="todayPlaceOrderBtn">Place order · ₹300</button>
-                <div class="home-indicator"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="comparison-arrow-badge hidden" id="comparisonArrow">
-          <span>›</span>
-        </div>
-
-        <div class="phone-column main-phone-column">
-          <div class="phone-above-label" id="mainPhoneLabel">
-            <span class="status-dot sage"></span>
-            <span id="mainPhoneLabelText">WITH ONE NEW FEATURE · INTERACTIVE APP</span>
-          </div>
-
-          <div class="iphone-frame active-phone">
-            <div class="iphone-notch-bar">
-              <span class="status-time">8:40</span>
-              <div class="dynamic-island"></div>
-              <div class="status-icons">
-                <span class="sig-bars">▂▄▆█</span>
-                <span class="bat-icon">▢</span>
-              </div>
-            </div>
-
-            <div class="phone-screen interactive-screen">
-              <div class="blinkit-top-header">
-                <div class="blinkit-delivery-row">
-                  <div>
-                    <div class="blinkit-brand-tag">blinkit <span class="eco-tag">conscious</span></div>
-                    <div class="delivery-eta">Delivery in 8 minutes</div>
-                    <div class="delivery-address">VIPS-TC Campus, Pitampura, Delhi ▾</div>
-                  </div>
-                  <button type="button" class="gp-wallet-pill" id="headerPointsBtn" title="Open Green Points Rewards">
-                    <span class="leaf-icon">🌿</span>
-                    <span id="phoneHeaderPoints">320</span>
-                    <span class="gp-unit">GP</span>
-                  </button>
-                </div>
-
-                <div class="phone-subnav" role="tablist">
-                  <button type="button" class="subnav-tab active" data-tab="checkout" id="tabBtnCheckout">
-                    Checkout
-                    <span class="tab-badge" id="cartCountBadge">3</span>
-                  </button>
-                  <button type="button" class="subnav-tab" data-tab="shop" id="tabBtnShop">
-                    Blinkit Store
-                  </button>
-                  <button type="button" class="subnav-tab" data-tab="rewards" id="tabBtnRewards">
-                    Green Points
-                  </button>
-                </div>
-              </div>
-
-              <div class="phone-scroll-body" id="phoneScrollBody">
-                <div class="tab-pane active" id="paneCheckout">
-                  <div class="screen-heading-row">
-                    <h2>Checkout</h2>
-                    <span class="order-tag-pill" id="checkoutDeliveryTag">⚡ 8 min Eco-Drop</span>
-                  </div>
-
-                  <div class="cart-items-card" id="checkoutCartList"></div>
-
-                  <div id="checkoutSwapNudgeContainer"></div>
-
-                  <div class="new-feature-box">
-                    <span class="box-floating-badge dark-green-badge">NEW FEATURE</span>
-
-                    <div class="feature-control-row">
-                      <div class="control-text-group">
-                        <div class="control-title">Cutlery &amp; Straws</div>
-                        <div class="control-sub" id="cutlerySubtext">Skipped by default · Saves 2 plastic items (+15 GP)</div>
-                      </div>
-                      <label class="ios-switch" aria-label="Include plastic cutlery">
-                        <input type="checkbox" id="cutleryToggle">
-                        <span class="ios-slider"></span>
-                      </label>
-                    </div>
-
-                    <div class="packaging-block">
-                      <div class="packaging-header-row">
-                        <span class="box-section-caption">PACKAGING</span>
-                        <span class="packaging-perk-tag" id="packagingPerkTag">+25 GP &amp; ₹5 off</span>
-                      </div>
-                      <div class="segmented-pill-group" role="group" aria-label="Packaging mode">
-                        <button type="button" class="seg-btn active" id="pkgMinimalBtn" data-pkg="minimal">Minimal</button>
-                        <button type="button" class="seg-btn" id="pkgStandardBtn" data-pkg="standard">Standard</button>
-                      </div>
-                    </div>
-
-                    <div class="extra-eco-toggles">
-                      <label class="eco-mini-toggle">
-                        <input type="checkbox" id="combinedDeliveryToggle" checked>
-                        <span class="mini-check-ui">✓</span>
-                        <span class="mini-toggle-copy">
-                          <strong>Group with neighbor's order</strong>
-                          <small>Same 8-min window · Cuts rider emissions (+20 GP)</small>
-                        </span>
-                      </label>
-
-                      <label class="eco-mini-toggle">
-                        <input type="checkbox" id="bagReturnToggle">
-                        <span class="mini-check-ui">✓</span>
-                        <span class="mini-toggle-copy">
-                          <strong>Hand back old paper bags to rider</strong>
-                          <small>Cleaned &amp; reused locally (+15 GP)</small>
-                        </span>
-                      </label>
-                    </div>
-
-                    <div class="skipped-plastic-banner" id="skippedPlasticBanner">
-                      You skipped 6 plastic items on this order · +60 Green Points
-                    </div>
-                  </div>
-
-                  <div class="gp-redeem-card">
-                    <div class="gp-redeem-left">
-                      <div class="gp-redeem-title">🌿 Use 200 Green Points</div>
-                      <div class="gp-redeem-sub" id="redeemCardSub">Save ₹20 instantly on this bill (Balance: 320 GP)</div>
-                    </div>
-                    <label class="ios-switch" aria-label="Redeem Green Points">
-                      <input type="checkbox" id="redeemPointsToggle">
-                      <span class="ios-slider"></span>
-                    </label>
-                  </div>
-
-                  <div class="bill-summary-card" id="billSummaryCard"></div>
-                </div>
-
-                <div class="tab-pane" id="paneShop">
-                  <div class="shop-filter-bar">
-                    <input type="search" id="shopSearchInput" class="shop-search-input" placeholder="Search milk, plates, tissues, batteries...">
-                    <div class="category-chips" id="categoryChips">
-                      <button type="button" class="cat-chip active" data-cat="all">All</button>
-                      <button type="button" class="cat-chip" data-cat="swap">⚡ Smart Swaps</button>
-                      <button type="button" class="cat-chip" data-cat="bistro">Bistro Meals</button>
-                      <button type="button" class="cat-chip" data-cat="daily">Honest Daily</button>
-                    </div>
-                  </div>
-
-                  <div class="win-win-explainer">
-                    <span>💡</span>
-                    <p><strong>Practical Promise:</strong> We only show a <em>Better Choice Swap</em> when switching saves you money over time <strong>and</strong> reduces waste.</p>
-                  </div>
-
-                  <div class="product-catalog-list" id="productCatalogList"></div>
-                </div>
-
-                <div class="tab-pane" id="paneRewards">
-                  <div class="rewards-hero-card">
-                    <div class="tier-pill" id="rewardsTierBadge">🌱 ECO SAPLING TIER</div>
-                    <div class="rewards-big-balance"><span id="rewardsPointsNumber">320</span> <small>GP</small></div>
-                    <div class="rewards-progress-wrap">
-                      <div class="rewards-progress-bar" id="rewardsProgressBar" style="width: 64%;"></div>
-                    </div>
-                    <div class="rewards-progress-label" id="rewardsProgressText">180 GP away from Eco Champion (2× Cashback)</div>
-
-                    <div class="impact-mini-stats">
-                      <div>
-                        <strong id="lifetimePlasticStat">24</strong>
-                        <span>Plastics Skipped</span>
-                      </div>
-                      <div>
-                        <strong id="lifetimeRupeeStat">₹1,015</strong>
-                        <span>Long-Term Saved</span>
-                      </div>
-                      <div>
-                        <strong id="lifetimeOrdersStat">4</strong>
-                        <span>Conscious Orders</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="section-subtitle-row">
-                    <h3>Redeem Green Points</h3>
-                    <span>10 GP = ₹1 Value</span>
-                  </div>
-                  <div class="rewards-catalog-list" id="rewardsCatalogList"></div>
-
-                  <div class="section-subtitle-row">
-                    <h3>Recent Green Activity</h3>
-                  </div>
-                  <div class="activity-log-list" id="activityLogList"></div>
-                </div>
-              </div>
-
-              <div class="phone-sticky-footer">
-                <button type="button" class="place-order-cta" id="mainPlaceOrderBtn">
-                  <span id="placeOrderBtnText">Place order · ₹355</span>
-                  <span class="cta-gp-pill" id="placeOrderGpBadge">+120 GP</span>
+                <button type="button" class="header-profile-btn" id="openGreenPointsBtn">
+                  <span class="leaf-dot">🌱</span>
+                  <span class="points-val" id="headerPointsVal">280</span>
+                  <span class="gp-text">GP</span>
                 </button>
-                <div class="home-indicator"></div>
               </div>
 
-              <div class="phone-modal-backdrop hidden" id="orderModalBackdrop">
-                <div class="phone-modal-card">
-                  <div class="modal-success-icon">🌿</div>
-                  <h3 id="modalTitle">Conscious Order Placed!</h3>
-                  <p id="modalSubtitle">Arriving in 8 minutes via Combined Eco-Rider.</p>
-                  <div class="modal-impact-box" id="modalImpactDetails"></div>
-                  <button type="button" class="modal-close-btn" id="closeModalBtn">Continue Exploring</button>
+              <div class="header-search-bar">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#71717a" stroke-width="2.5" stroke-linecap="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="searchInput" placeholder="Search 'milk', 'chips', 'batteries'..." autocomplete="off">
+              </div>
+
+              <div class="header-category-scroller" id="categoryScroller">
+                <button type="button" class="cat-pill active" data-cat="all">All Items</button>
+                <button type="button" class="cat-pill" data-cat="groceries">Dairy &amp; Groceries</button>
+                <button type="button" class="cat-pill" data-cat="snacks">Snacks &amp; Munchies</button>
+                <button type="button" class="cat-pill" data-cat="household">Home &amp; Care</button>
+                <button type="button" class="cat-pill" data-cat="personal">Personal Care</button>
+              </div>
+            </header>
+
+            <main class="phone-scroll-area" id="phoneScrollArea">
+              <div class="screen-view active" id="viewHome">
+                <div class="ecoalt-ticker">
+                  <span class="ticker-badge">EcoAlt Active</span>
+                  <span class="ticker-text" id="tickerText">Dual-Benefit: Every swap saves you money &amp; reduces waste</span>
+                </div>
+
+                <div class="section-title-row">
+                  <h2>Popular on Blinkit</h2>
+                  <span class="item-count-label" id="catalogCount">13 items</span>
+                </div>
+
+                <div class="products-grid" id="productsGrid"></div>
+              </div>
+
+              <div class="screen-view" id="viewCart">
+                <div class="cart-screen-inner">
+                  <div class="cart-heading-row">
+                    <h2>Checkout</h2>
+                    <span class="cart-eta-tag">⚡ 8 MIN DELIVERY</span>
+                  </div>
+
+                  <div class="cart-items-card" id="cartItemsList"></div>
+
+                  <div class="checkout-nudge-zone" id="checkoutNudgeZone"></div>
+
+                  <div class="checkout-eco-card">
+                    <div class="eco-card-header">
+                      <span class="eco-card-badge">CONSCIOUS CHOICES</span>
+                      <span class="eco-card-points" id="checkoutEcoGains">+50 GP</span>
+                    </div>
+
+                    <div class="eco-toggle-row">
+                      <div class="eco-toggle-info">
+                        <div class="eco-toggle-title">Plastic Cutlery &amp; Straws</div>
+                        <div class="eco-toggle-sub" id="cutlerySub">Skipped by default · Saves 2 plastic items (+15 GP)</div>
+                      </div>
+                      <label class="switch-control">
+                        <input type="checkbox" id="cutleryToggle">
+                        <span class="switch-track"></span>
+                      </label>
+                    </div>
+
+                    <div class="packaging-selector-group">
+                      <div class="packaging-label-row">
+                        <span class="pkg-title">Packaging Type</span>
+                        <span class="pkg-perk" id="pkgPerkBadge">₹5 off bill &amp; +25 GP</span>
+                      </div>
+                      <div class="segmented-control">
+                        <button type="button" class="seg-option active" id="pkgMinimalBtn">Minimal</button>
+                        <button type="button" class="seg-option" id="pkgStandardBtn">Standard</button>
+                      </div>
+                    </div>
+
+                    <div class="eco-sub-toggles">
+                      <label class="checkbox-row">
+                        <input type="checkbox" id="groupedDeliveryToggle" checked>
+                        <span class="custom-check">✓</span>
+                        <span class="checkbox-text">
+                          <strong>Combine delivery slot with neighbor</strong>
+                          <small>Rider makes 1 trip instead of 2 (+20 GP)</small>
+                        </span>
+                      </label>
+                      <label class="checkbox-row">
+                        <input type="checkbox" id="returnBagsToggle">
+                        <span class="custom-check">✓</span>
+                        <span class="checkbox-text">
+                          <strong>Return used Blinkit paper bags to rider</strong>
+                          <small>Cleaned and re-circulated (+15 GP)</small>
+                        </span>
+                      </label>
+                    </div>
+
+                    <div class="savings-summary-pill" id="skippedBanner">
+                      You skipped 4 plastic items on this order
+                    </div>
+                  </div>
+
+                  <div class="bill-details-card" id="billDetailsCard"></div>
                 </div>
               </div>
 
-              <div class="phone-toast hidden" id="phoneToast"></div>
+              <div class="screen-view" id="viewPoints">
+                <div class="points-screen-inner">
+                  <div class="points-balance-card">
+                    <span class="points-tier-pill" id="tierPill">🌱 ECO EXPLORER</span>
+                    <div class="points-hero-number"><span id="pointsHeroVal">280</span> <small>GP</small></div>
+                    <div class="points-hero-sub">10 Green Points = ₹1 redeemable credit</div>
+                    <div class="progress-bar-shell">
+                      <div class="progress-bar-fill" id="tierProgressFill" style="width: 56%;"></div>
+                    </div>
+                    <div class="progress-label" id="tierProgressLabel">220 GP away from Eco Champion (2× Points)</div>
+                  </div>
+
+                  <div class="impact-metrics-row">
+                    <div class="impact-box">
+                      <span class="impact-num" id="statPlasticSkipped">18</span>
+                      <span class="impact-label">Plastics Skipped</span>
+                    </div>
+                    <div class="impact-box">
+                      <span class="impact-num" id="statMoneySaved">₹840</span>
+                      <span class="impact-label">Saved Over Time</span>
+                    </div>
+                    <div class="impact-box">
+                      <span class="impact-num" id="statOrdersCount">3</span>
+                      <span class="impact-label">Conscious Orders</span>
+                    </div>
+                  </div>
+
+                  <div class="section-title-row">
+                    <h2>Redeem Rewards</h2>
+                  </div>
+                  <div class="rewards-options-list" id="rewardsList"></div>
+
+                  <div class="section-title-row">
+                    <h2>Recent Green Activity</h2>
+                  </div>
+                  <div class="activity-history-list" id="activityList"></div>
+                </div>
+              </div>
+            </main>
+
+            <div class="floating-cart-bar hidden" id="floatingCartBar">
+              <div class="cart-bar-left">
+                <span class="cart-bar-qty" id="cartBarQty">2 items</span>
+                <span class="cart-bar-price" id="cartBarPrice">₹195</span>
+              </div>
+              <button type="button" class="cart-bar-btn" id="openCartBarBtn">
+                <span>View Cart</span>
+                <span class="cart-bar-arrow">→</span>
+              </button>
             </div>
+
+            <div class="checkout-footer hidden" id="checkoutFooter">
+              <button type="button" class="place-order-button" id="placeOrderBtn">
+                <span class="place-order-text" id="placeOrderText">Place Order · ₹190</span>
+                <span class="place-order-gp" id="placeOrderGp">+60 GP</span>
+              </button>
+            </div>
+
+            <nav class="phone-bottom-nav">
+              <button type="button" class="nav-btn active" data-view="viewHome" id="navHome">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                <span>Store</span>
+              </button>
+              <button type="button" class="nav-btn" data-view="viewCart" id="navCart">
+                <div class="nav-icon-wrapper">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                  </svg>
+                  <span class="nav-cart-badge hidden" id="navCartBadge">0</span>
+                </div>
+                <span>Cart</span>
+              </button>
+              <button type="button" class="nav-btn" data-view="viewPoints" id="navPoints">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                <span>Green Points</span>
+              </button>
+            </nav>
+
+            <div class="order-success-modal hidden" id="successModal">
+              <div class="modal-card">
+                <div class="modal-check-icon">✓</div>
+                <h3>Order Placed in 8 Mins!</h3>
+                <p>Delivering via eco-optimized dispatch to Sector 14, Rohini.</p>
+                <div class="modal-eco-summary" id="modalEcoSummary"></div>
+                <button type="button" class="modal-cta-btn" id="modalDoneBtn">Continue Shopping</button>
+              </div>
+            </div>
+
+            <div class="app-toast hidden" id="appToast"></div>
           </div>
         </div>
-      </section>
-    </main>
+
+        <div class="phone-home-indicator"></div>
+      </div>
+    </div>
+
+    <div class="canvas-right-zone">
+      <div class="brand-byline">Know before you click</div>
+      <button type="button" class="refresh-demo-btn" id="refreshDemoBtn" title="Reset and restart app experience">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="23 4 23 10 17 10"></polyline>
+          <polyline points="1 20 1 14 7 14"></polyline>
+          <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+        </svg>
+        <span>Refresh Demo</span>
+      </button>
+    </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
